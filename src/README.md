@@ -17,8 +17,17 @@ ezgba is released under an unrestrictive license. See COPYING.txt for details.
 Compiling
 ---------
 Windows, Mac OS X, and Linux are all supported. Everything is written in C++.
-CMake, Boost, and wxWidgets (if building GUI) are required to compile. Supports
-GCC v5+ as far as compilers go.
+CMake, Boost, TCLAP, and wxWidgets (if building GUI) are required to compile.
+Supports GCC v5+ as far as compilers go.
+
+In the `src` directory:
+
+```
+mkdir build && cd build
+cmake .. && make
+```
+
+You may then install the `ezgba-cli` binary as you wish.
 
 
 SRAM Patches

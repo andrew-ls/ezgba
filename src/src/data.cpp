@@ -56,6 +56,7 @@ std::vector<unsigned char> read_file(const std::string & file_path) {
 }
 
 
+// TODO Allow for paths relative to working directory.
 void write_file(const std::vector<unsigned char> & data, const std::string & file_path, const bool create_parent_dirs) {
 	// Check/create parent directories.
 	boost::filesystem::path parent_dirname = boost::filesystem::path(file_path).parent_path();
@@ -194,7 +195,7 @@ size_t find_rom_eod(const std::vector<unsigned char> rom_data, const bool interc
 				return i;
 			}
 		}
-		
+
 		return 0;
 	}
 

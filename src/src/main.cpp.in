@@ -146,7 +146,7 @@ Options parse_command_line_arguments(const int argc, const char ** argv, std::st
 		BetterCmdLineOutput cmd_output;
 
 		TCLAP::ValueArg<std::string> input_arg("i", "input", "Input *.gba file; no compressed formats.", false, "", "path");
-		TCLAP::ValueArg<std::string> output_arg("o", "output", "Output file path.", false, "", "path");
+		TCLAP::ValueArg<std::string> output_arg("o", "output", "Output file path (must be absolute).", false, "", "path");
 		TCLAP::ValueArg<std::string> ips_arg("", "ips", "IPS patch file.", false, "", "path");
 
 		TCLAP::SwitchArg sram_arg("", "no-sram", "Patch ROM save type to SRAM.", true);
